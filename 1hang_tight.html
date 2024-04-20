@@ -11,72 +11,72 @@
         var fScriptTag = document.getElementsByTagName('script')[0];
         fScriptTag.parentNode.insertBefore(tag, fScriptTag);
         
-            var player;
-            function onYouTubePlayerAPIReady() {
-                player = new YT.Player('player', {
-                   height: '0',
-                   width: '0',
-                   videoId: 'cSTC5RwISN0',
-                   playerVars:{'mute' : 0,'autoplay':1},
-                   events: {  }
-                });
-            }
-        
-        </script>
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                image-rendering: pixelated;
-            }
-            .gradient_panel {
-                display: flex;
-                width: 55vh;
-                height: 55vh;
-                background: linear-gradient(45deg, #3c21b7, #8b63da, #cb98ed, #cfcbd2);
-                text-align: center;
-                justify-content: center;
-                align-items: center;
-                border-radius: 15px;
-                box-shadow: 0 5px 25px 2px;
-                margin-top: 21vh;
-            }
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'cSTC5RwISN0',
+                playerVars:{'mute' : 0,'autoplay':1,'loop':1},
+                events: {  }
+            });
+        }
+    
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            image-rendering: pixelated;
+        }
+        .gradient_panel {
+            display: flex;
+            width: 55vh;
+            height: 55vh;
+            background: linear-gradient(45deg, #3c21b7, #8b63da, #cb98ed, #cfcbd2);
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px 2px;
+            margin-top: 21vh;
+        }
 
-            body {
-                background-image: url(https://lh3.googleusercontent.com/d/18xpplSPOpjjIlFujJOfLkVT1ODJLMYRj);
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                overflow: hidden;
-                margin: 0rem;
-                height: 100vh;
-                width: 100vw;
-            }
+        body {
+            background-image: url(https://lh3.googleusercontent.com/d/18xpplSPOpjjIlFujJOfLkVT1ODJLMYRj);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin: 0rem;
+            height: 100vh;
+            width: 100vw;
+        }
 
-            .background {
-                width: 300vh;
-                height: 100vh;
-                
-                /* background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center;
-                background-attachment: fixed; */
-                display: flex;
-            }
+        .background {
+            width: 300vh;
+            height: 100vh;
+            
+            /* background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; */
+            display: flex;
+        }
 
-            .transition {
-                width: 25vw;
-            }
+        .transition {
+            width: 25vw;
+        }
 
-            .bottom1 {
-                position: fixed;
-                bottom: 10%; transform: translate(0%, 50%);
-            }
-            a {
-                text-decoration: none;
-                color: black;
-            }
-        </style>
+        .bottom1 {
+            position: fixed;
+            bottom: 10%; transform: translate(0%, 50%);
+        }
+        a {
+            text-decoration: none;
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <div id="player"></div>
