@@ -27,6 +27,7 @@
             * {
                 margin: 0;
                 padding: 0;
+                image-rendering: pixelated;
             }
             .gradient_panel {
                 display: flex;
@@ -42,6 +43,7 @@
             }
 
             body {
+                background-image: url(https://lh3.googleusercontent.com/d/18xpplSPOpjjIlFujJOfLkVT1ODJLMYRj);
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -54,14 +56,22 @@
             .background {
                 width: 300vh;
                 height: 100vh;
-                background-image: url(https://steamuserimages-a.akamaihd.net/ugc/847092187909232389/B30FDC786E112747191946B2E3C783731F810FA0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
-                background-repeat: no-repeat;
+                
+                /* background-repeat: no-repeat;
                 background-size: cover;
                 background-position: center;
-                background-attachment: fixed;
+                background-attachment: fixed; */
                 display: flex;
             }
 
+            .transition {
+                width: 25vw;
+            }
+
+            .bottom1 {
+                position: fixed;
+                bottom: 10%; transform: translate(0%, 50%);
+            }
             a {
                 text-decoration: none;
                 color: black;
@@ -71,7 +81,12 @@
 <body>
     <div id="player"></div>
     
-    <a href="/2safety.html"><div class="background"></div></a><br>
+    <div class="bottom1">
+        <a href="/2safety.html">
+            <img class="transition" src="https://lh3.googleusercontent.com/d/15r1kqErcGeouLWTMY6njMVrNiSfeT_w1" alt="Kafka Stand">
+        </a><br>
+    </div>
+    
     
     
 </body>
