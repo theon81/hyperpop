@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝚜𝚊𝚏𝚎𝚝𝚢</title>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        
+        var fScriptTag = document.getElementsByTagName('script')[0];
+        fScriptTag.parentNode.insertBefore(tag, fScriptTag);
+        
+            var player;
+            function onYouTubePlayerAPIReady() {
+                player = new YT.Player('player', {
+                   height: '0',
+                   width: '0',
+                   videoId: 'SMIQbo-61P4',
+                   playerVars:{'mute' : 0,'autoplay':1},
+                   events: {  }
+                });
+            }
+        
+        </script>
+</head>
+<body>
+    <div id="player"></div>
+    <a href="/3paralyzed.html">[Go visible]</a><br>
+
+    
+</body>
+</html>

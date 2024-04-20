@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝚑𝚊𝚗𝚐 𝚝𝚒𝚐𝚑𝚝</title>
+    <script>
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        
+        var fScriptTag = document.getElementsByTagName('script')[0];
+        fScriptTag.parentNode.insertBefore(tag, fScriptTag);
+        
+            var player;
+            function onYouTubePlayerAPIReady() {
+                player = new YT.Player('player', {
+                   height: '0',
+                   width: '0',
+                   videoId: 'cSTC5RwISN0',
+                   playerVars:{'mute' : 0,'autoplay':1},
+                   events: {  }
+                });
+            }
+        
+        </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .gradient_panel {
+                display: flex;
+                width: 55vh;
+                height: 55vh;
+                background: linear-gradient(45deg, #3c21b7, #8b63da, #cb98ed, #cfcbd2);
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                border-radius: 15px;
+                box-shadow: 0 5px 25px 2px;
+                margin-top: 21vh;
+            }
+
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow: hidden;
+                margin: 0rem;
+                height: 100vh;
+                width: 100vw;
+            }
+
+            .background {
+                width: 300vh;
+                height: 100vh;
+                background-image: url(https://steamuserimages-a.akamaihd.net/ugc/847092187909232389/B30FDC786E112747191946B2E3C783731F810FA0/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+                background-attachment: fixed;
+                display: flex;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        </style>
+</head>
+<body>
+    <div id="player"></div>
+    
+    <a href="/2safety.html"><div class="background"></div></a><br>
+    
+    
+</body>
+</html>
