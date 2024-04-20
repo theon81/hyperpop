@@ -11,21 +11,199 @@
         var fScriptTag = document.getElementsByTagName('script')[0];
         fScriptTag.parentNode.insertBefore(tag, fScriptTag);
         
-            var player;
-            function onYouTubePlayerAPIReady() {
-                player = new YT.Player('player', {
-                   height: '0',
-                   width: '0',
-                   videoId: 'RmbXb1KyUks',
-                   playerVars:{'mute' : 0,'autoplay':1},
-                   events: {  }
-                });
+        var player;
+        function onYouTubePlayerAPIReady() {
+            player = new YT.Player('player', {
+                height: '0',
+                width: '0',
+                videoId: 'RmbXb1KyUks',
+                playerVars:{'mute' : 0,'autoplay':1},
+                events: {  }
+            });
+        }
+    </script>
+    <style>
+        * {
+            margin:0px;
+            padding:0px;
+            color:#d2738a;
+        }
+        
+        body {
+            background-color:black;
+            overflow:hidden;
+            width:100vw;
+            height:100vh;
+            color: #d2738a;
+            text-align:center;
+            line-height:100vh;
+            font-style:italic;
+            font-weight:100;
+            font-size:10vw;
+            letter-spacing:20px;
+            overflow:hidden;
+        }
+            
+        #word {
+            opacity: 0;
+            transition: opacity 1s;
+            z-index:1;
+        }
+            
+        .vignette {
+            background: rgb(0,0,0);
+            background: radial-gradient(circle, rgba(0,0,0,0) 30%, rgba(0,0,0,1) 90%);
+            position:absolute;
+            width:100vw;
+            height:100vh;
+            z-index:10;
+        }
+            
+        .building {
+            position:absolute;
+            background-size:56vw;
+            background-position: center center;
+            width:100vw;
+            height:100vh;
+            background-image:url("https://thaer.no/fullscreen/ladder/ladder-01.svg");
+            animation: moveY 3000s linear;  
+        }
+            
+        @keyframes moveY {
+            from {
+                background-position-y: -100000px;
             }
         
-        </script>
+            to {
+                background-position-y: 100000px;
+            }
+        }
+            
+        .wires {
+            position:absolute;
+            width:100vw;
+            height:100vh;
+            background-size:100vw;
+            background-position: center center;
+        }
+            
+        .w01 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w01.svg");
+            animation: moveY 2000s linear infinite;
+            z-index:2;
+        }
+            
+        .w02 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w02.svg");
+            animation: moveY 1800s linear infinite;
+            z-index:3;
+        }
+            
+        .w03 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w03.svg");
+            animation: moveY 1600s linear infinite;
+            z-index:4;
+        }   
+            
+        .w04 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w04.svg");
+            animation: moveY 1400s linear infinite;
+            z-index:5;
+        }
+            
+        .w05 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w05.svg");
+            animation: moveY 1200s linear infinite;
+            z-index:6;
+        }
+            
+        .w06 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w06.svg");
+            animation: moveY 1000s linear infinite;
+            z-index:7;
+        }
+            
+        .w07 {
+            background-image:url("https://thaer.no/fullscreen/ladder/w07.svg");
+            animation: moveY 800s linear infinite;
+            z-index:8;
+        }
+
+        .redirect {
+            position:absolute;
+            z-index:98;
+            left:50%;
+            transform:translate(-49%);
+            bottom:20px;
+        }
+
+        .redirect a {
+            color:white;
+            text-decoration:none;
+            display:block;
+            float:left;
+            padding-right:10px;
+            padding-left:10px;
+            font-style:italic;
+            letter-spacing:3px;
+            text-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+            transition:letter-spacing 0.2s ease-in-out;
+            line-height:40px;
+            font-size:10px;
+        }
+
+        .redirect a:hover {
+            color: #d2738a;
+        }
+        </style>
 </head>
 <body>
-    <div id="player"></div>
-    <a href="6gossip.html">[Go visible]</a><br>
+    <div class="building"></div>
+    <div class="wires w01"></div>
+    <div class="wires w02"></div>
+    <div class="wires w03"></div>
+    <div class="wires w04"></div>
+    <div class="wires w05"></div>
+    <div class="wires w06"></div>
+    <div class="wires w07"></div>
+    <div class="vignette"></div>
+    <div id="word"></div>
+    <br><br><br>
+
+    <div class="redirect">
+        <a href="6gossip.html">
+            next
+        </a>
+    </div>
+
+    <script>
+        const wordContainer = document.querySelector("#word");
+        const words = [
+            "Grass", "field"
+        ];
+        let index = 0;
+
+        function showNextWord() {
+            wordContainer.innerHTML = words[index];
+            wordContainer.style.opacity = 1;
+            index++;
+
+        if (index >= words.length) {
+            index = 0;
+        }
+
+        setTimeout(hideWord, 200);
+        }
+
+        function hideWord() {
+            wordContainer.style.opacity = 0;
+            setTimeout(showNextWord, 200);
+        }
+
+        showNextWord();
+    </script>
+    
+
+</audio>
 </body>
 </html>
