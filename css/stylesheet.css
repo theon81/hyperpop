@@ -10,6 +10,7 @@
 	-webkit-font-smoothing: none;
 	/*-moz-osx-font-smoothing: grayscale;
 	*/
+    cursor: url(https://lh3.googleusercontent.com/d/1piw_C2kMh9wFqlSqzstVVZsjZHOAz8em), auto;
 	}
 
     #navbar {
@@ -35,6 +36,7 @@
     }
     
     a {
+        cursor: url(https://lh3.googleusercontent.com/d/1Qml1HNldQsa0bHQcJbSl92JaWQBH4BwZ), auto;
         text-decoration: none;
     }
 
